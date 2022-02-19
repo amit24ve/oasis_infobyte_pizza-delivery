@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Kaushan+Script|Oswald|Sarabun:400,600,700|Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="images/pizza-icon.png" type="img/jpg">
+    <title>PIZZA DELIVERY !</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_target">
+        <img src="images/menu-icon.png" alt="menu icon">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand logo"href="#"><img src="images/logo.png" alt="logo of pizza house" width="70%" ></a>
+      <span class="navbar-brand navbar-text"> <a href="#"></a> PIZZA LOVER.</span>
+      <div class="collapse navbar-collapse" id="collapse_target">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Delivery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
+          <li id="reserve-button">
+            <button onclick="submit()" id="reserve" class="btn reserve-btn">Reserve a Table</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="bd-example">
+          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/pzza0.jpg" class="d-block w-100" alt="an image of pizza">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Ch! Pizza Terrace -</h5>
+                  <p>In Pizza We Crust!</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/pzza1.jpg" class="d-block w-100" alt="an image of pizza">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Google User Review -</h5>
+                  <p>“THE GLUTEN FREE CRUST IS THE BEST THING I’VE EVER TASTED!”</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/pzz.jpg" class="d-block w-100" alt="images/pizza2.jpg">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5></h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="container-fluid menu">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-9">
+                <h2>Menu</h2>
+                <div class="card text-center" id="menuCard">
+                  <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pizzas</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Drinks</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Hearty Appetizers</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+
+                    <div class="row">
+
+                      <div class="col-sm-4">
+                        <form id="pizza-one-form">
+                        <div class="card" id="menuItem">
+                          <div class="card-header">
+                            <h5 id="pizza-one-label">CHICKEN SUPREME</h5>
+                          </div>
+                            <img class="card-img-top" src="images/menu-item0.png" alt="an image of menu item3" width="98%">
+                            <div class="card-footer">
+                              <div class="form-group" id="numberInput">
+                                <input type="number" class="form-control" placeholder=" 1" id="pizza-quantity" min="1" required>
+                              </div>
+
+                              <select class="form-control drop" id="size-selector" required>
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+
+                              </select>
+
+
+                              <select class="form-control drop" id="crust-selector" required>
+                                <option>Puff Pastry</option>
+                                <option>Tripple Cheese Crust</option>
+                                <option>Double Cheesy Crust</option>
+                                <option>Cheesy Crust</option>
+                                <option>Classic Pizza Crust</option>
+
+                              </select>
+
+                              <select class="form-control drop" id="topping-selector" required>
+                                <option>Extra Beef</option>
+                                <option>Extra Ham</option>
+                                <option>Extra Cheese Mozarella</option>
+                                <option>Extra Bacon</option>
+                                <option>Extra Sausages</option>
+                                <option>Extra Chicken</option>
+                                <option>Extra Spinach</option>
+                                <option>Extra Onion</option>
+                                <option>Extra Mushrooms</option>
+                                <option>Extra Tomatoes</option>
+                                <option>Extra Jalapenos</option>
+                                <option>Extra Olives</option>
+                              </select>
+
+                              <button type="sumbit" class="btn btn-primary" id="checkout">Select</button>
+
+
+                            </div>
+                        </div>
+                      </div>
+                      </form>
+
+                      <div class="col-sm-4">
+                        <div class="card" id="menuItem">
+                          <div class="card-header">
+                            BEEF BBQ
+                          </div>
+                            <img class="card-img-top" src="images/menu-item7.png" alt="an image of menu item3" width="98%">
+                            <div class="card-footer">
+                              
+                              <div class="dropdown">
+                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Size
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <button class="dropdown-item" type="button">Large</button>
+                                  <button class="dropdown-item" type="button">Medium</button>
+                                  <button class="dropdown-item" type="button">Small</button>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-warning btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Crust
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Puff Pastry (200)</a>
+                                  <a class="dropdown-item" href="#">Tripple Cheese Crust (400)</a>
+                                  <a class="dropdown-item" href="#">Double Cheesy Crust (300)</a>
+                                  <a class="dropdown-item" href="#">Cheesy Crust (150)</a>
+                                  <a class="dropdown-item" href="#">Classic Pizza Crust</a>
+                                  <a class="dropdown-item" href="#">Thin & Crust (100)</a>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Toppings
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Extra Beef (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Ham (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Cheese Mozarella (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Bacon (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Sausages (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Chicken (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Spinach (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Onion (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Mushrooms (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Tomatoes (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Jalapenos (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Olives (200)</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-4">
+                        <div class="card" id="menuItem">
+                          <div class="card-header">
+                            VEGGIE TIKKA
+                          </div>
+                            <img class="card-img-top" src="images/menu-item2.png" alt="an image of menu item3" width="98%">
+                            <div class="card-footer">
+                            
+                              <div class="dropdown">
+                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Size
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <button class="dropdown-item" type="button">Large</button>
+                                  <button class="dropdown-item" type="button">Medium</button>
+                                  <button class="dropdown-item" type="button">Small</button>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-warning btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Crust
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Puff Pastry (200)</a>
+                                  <a class="dropdown-item" href="#">Tripple Cheese Crust (400)</a>
+                                  <a class="dropdown-item" href="#">Double Cheesy Crust (300)</a>
+                                  <a class="dropdown-item" href="#">Cheesy Crust (150)</a>
+                                  <a class="dropdown-item" href="#">Classic Pizza Crust</a>
+                                  <a class="dropdown-item" href="#">Thin & Crust (100)</a>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Toppings
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Extra Beef (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Ham (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Cheese Mozarella (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Bacon (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Sausages (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Chicken (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Spinach (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Onion (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Mushrooms (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Tomatoes (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Jalapenos (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Olives (200)</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="card" id="menuItem">
+                          <div class="card-header">
+                            FETA AND VEGGIE
+                          </div>
+                            <img class="card-img-top" src="images/menu-item5.png" alt="an image of menu item3" width="98%">
+                            <div class="card-footer">
+                            
+                              <div class="dropdown">
+                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Size
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <button class="dropdown-item" type="button">Large</button>
+                                  <button class="dropdown-item" type="button">Medium</button>
+                                  <button class="dropdown-item" type="button">Small</button>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-warning btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Crust
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Puff Pastry (200)</a>
+                                  <a class="dropdown-item" href="#">Tripple Cheese Crust (400)</a>
+                                  <a class="dropdown-item" href="#">Double Cheesy Crust (300)</a>
+                                  <a class="dropdown-item" href="#">Cheesy Crust (150)</a>
+                                  <a class="dropdown-item" href="#">Classic Pizza Crust</a>
+                                  <a class="dropdown-item" href="#">Thin & Crust (100)</a>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Toppings
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Extra Beef (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Ham (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Cheese Mozarella (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Bacon (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Sausages (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Chicken (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Spinach (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Onion (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Mushrooms (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Tomatoes (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Jalapenos (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Olives (200)</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-4">
+                        <div class="card" id="menuItem">
+                          <div class="card-header">
+                            PEPPERONI
+                          </div>
+                            <img class="card-img-top" src="images/menu-item8.png" alt="an image of menu item3" width="98%">
+                            <div class="card-footer">
+                              
+                              <div class="dropdown">
+                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Size
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <button class="dropdown-item" type="button">Large</button>
+                                  <button class="dropdown-item" type="button">Medium</button>
+                                  <button class="dropdown-item" type="button">Small</button>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-warning btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Crust
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Puff Pastry (200)</a>
+                                  <a class="dropdown-item" href="#">Tripple Cheese Crust (400)</a>
+                                  <a class="dropdown-item" href="#">Double Cheesy Crust (300)</a>
+                                  <a class="dropdown-item" href="#">Cheesy Crust (150)</a>
+                                  <a class="dropdown-item" href="#">Classic Pizza Crust</a>
+                                  <a class="dropdown-item" href="#">Thin & Crust (100)</a>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Toppings
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Extra Beef (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Ham (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Cheese Mozarella (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Bacon (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Sausages (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Chicken (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Spinach (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Onion (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Mushrooms (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Tomatoes (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Jalapenos (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Olives (200)</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-4">
+                        <div class="card" id="menuItem">
+                          <div class="card-header">
+                            TROPICAL VEGGIE
+                          </div>
+                            <img class="card-img-top" src="images/menu-item4.png" alt="an image of menu item3" width="98%">
+                            <div class="card-footer">
+                            
+                              <div class="dropdown">
+                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Size
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <button class="dropdown-item" type="button">Large</button>
+                                  <button class="dropdown-item" type="button">Medium</button>
+                                  <button class="dropdown-item" type="button">Small</button>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-warning btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Crust
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Puff Pastry (200)</a>
+                                  <a class="dropdown-item" href="#">Tripple Cheese Crust (400)</a>
+                                  <a class="dropdown-item" href="#">Double Cheesy Crust (300)</a>
+                                  <a class="dropdown-item" href="#">Cheesy Crust (150)</a>
+                                  <a class="dropdown-item" href="#">Classic Pizza Crust</a>
+                                  <a class="dropdown-item" href="#">Thin & Crust (100)</a>
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Toppings
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Extra Beef (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Ham (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Cheese Mozarella (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Bacon (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Sausages (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Chicken (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Spinach (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Onion (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Mushrooms (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Tomatoes (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Jalapenos (200)</a>
+                                  <a class="dropdown-item" href="#">Extra Olives (200)</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <h2>Order Details</h2>
+                <div class="card" id="orderDetails">
+                  <div class="card-body">
+                    <div class="summary">
+                      <div id="price-breakdown">
+                        <div class="summary-items">
+                          <p class="space"><span id="size-price"></span></p>
+                        </div>
+                        <div class="summary-items">
+                          <p class="space"><span id="toppings-price"></span></p>
+                        </div>
+                        <div class="summary-items">
+                          <p class="space"><span id="crust-price"></span></p>
+                        </div>
+                        <div class="summary-items">
+                          <p class="space"><span id="delivery-price"></span></p>
+                        </div>
+                      </div>
+                      <div class="summary-items total" id="total">
+                        <h5 class="sum-price" id="total-price"></h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button onclick="submit()" id="checkOut" class="btn reserve-btn">CHECKOUT</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="container-large aboutUs">
+          <div class="col-md-12">
+            <div class="row about-us">
+              <div class="col-md-7">
+                <div class="container founder-section">
+                  <h1>About Us.</h1>
+                  <img id="my-image" src="images/Face1.jpg" alt="image of founder" width="20%">
+                  <p>AMIT KUMAR started hosting pop-up pizza nights out, on the terrace of a small building in the suburb town of NOIDA in 2022. DANKAUR by freshly made pies featuring tomatoes, peppers, onions, and basil from his family's one-acre garden—as well as hand-crafted dough and meats of pastured cows from local Masaai butchers, visitors to the PIZZA! with an inverted 'i' were seeking out both dinner and an experience. Traveling upwards of two hours from Nairobi to eat pizza (whilst TULSI NAGAR was unbearably narrow & riddled with traffic back then), most never complained.</p>
+                  <p>“It’s not just a meal, it’s a destination,” says AMIT KUMAR. “People come here to relax and enjoy the setting, not to grab a meal and run.”</p>
+                  <p>"When the sun sets behind the scenic Ngong Hills, the light bathes everything in beautiful magenta tones, you cannot admire the breathtaking spectacle whilst indulging in the restaurant's mouth-watering highlights and fail to feel the strong life force energy. The aliveness, also known as the<strong> 'PIZZA'.</strong>"</p>
+                  <p>The white-settler community and the tourists loved it, the locals made it popular, fast-forward nine years later and the restaurant's 7 branches bake 300 pizzas in four hours.</p>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="container contact-us">
+                  <h1 class="wow jackInTheBox">CONTACT US</h1>
+                  <form id="feedbackForm">
+                    <div class="form-row">
+                      <div class="form-group col-md-6 wow jackInTheBox">
+                        <input type="text" class="form-control" id="userName" placeholder="Name...">
+                      </div>
+                      <div class="form-group col-md-6 wow jackInTheBox">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email...">
+                      </div>
+                      <div class="form-group col-md-12 wow jackInTheBox">
+                        <textarea id="userMessage" name="message" class="form-control" placeholder="Your message here..." rows="8" required="required" data-error="Please, leave us a message."></textarea>
+                      </div>
+                      <div class="col-md-12 wow jackInTheBox" id="submit-button">
+                        <button onclick="submit()" id="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid footer">
+            <div class="row footerItems">
+                <div class="container links">
+                  <a href="https://twitter.com/porridgelaugh"><img src="images/tw.png" alt="an image of twitter logo"></a>
+                  <a href="https://www.facebook.com"><img src="images/fb2.png" alt="an image of facebook logo"></a>
+                  <a href="#"><img src="images/ytube.png" alt="an image of flickr logo"></a>
+                  <a href="https://www.tumblr.com/"> <img src="images/tumblr.png" alt="image of tumblr icon" hspace="7"></a>
+                  <a href="https://www.pinterest.com"><img src="images/pin.png" alt="an image of pinterest logo"></a>
+                </div>
+            </div>
+                <div class="container branches">
+                  <h5>BRANCHES</h5>
+                  <h5>NOIDA:</h5>
+                  <p>SECTOR 62</p>
+                  <h5>GAUTAM BUDDHA NAGAR:</h5>
+                  <p>DANKAUR
+                     TULSI NAGAR 
+                     GALGOTIAN BOY</p>
+                  <h5>GREATER NOIDA:</h5>
+                  <p>GALGOTIAS UNIVERSITY</p>
+                </div>
+
+
+
+          <div class="footer-text">
+            <p>AMIT KUMAR</p>
+            <p>2022</p>
+          </div>
+        </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

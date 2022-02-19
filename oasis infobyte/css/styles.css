@@ -1,0 +1,276 @@
+.navbar {
+  background: rgba(0,0,0,0.4) !important;
+}
+
+.navbar .navbar-brand {
+
+  font-weight: bolder;
+  color: #cdcdcd;
+  font-size: 1.3em;
+  margin-left: 5%;
+}
+.navbar-text {
+  font-family: 'Kaushan Script', cursive;
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.navbar-text:hover {
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.nav-item {
+  margin-left: 30px;
+}
+#reserve {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+  color: #cdcdcd;
+  border: solid #ffffff;
+  border-radius: 50px;
+  margin-right: 50px;
+  margin-left: 100px;
+}
+#reserve:hover {
+  color: #ffffff;
+  background: rgba(31,181,40,0.5)
+}
+.navbar .nav-item a {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+  color: #cdcdcd;
+  font-weight: bolder;
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.nav-item:hover a {
+  color: #ffffff;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.logo img {
+  margin-left: auto;
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.logo:hover img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.carousel-caption {
+  color:#fff;
+  text-align:center;
+  top:45%;
+  left: 10%;
+  width: 550px;
+  bottom:auto;
+  -webkit-transform:translate(0, -50%);
+  -ms-transform:translate(0, -50%);
+  transform:translate(0, -50%);
+}
+.carousel-caption h5 {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+}
+.carousel-caption p {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+}
+.menu {
+  padding: 5%;
+  background: url('../images/woodbg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0px 5px 8px #2E1C13;
+}
+.menu h2 {
+  font-family: 'Shrikhand', cursive;
+  color: #ffda00;
+  font-size: 40px;
+}
+.text-center a {
+  font-family: 'Shrikhand', cursive;
+  color: #cdcdcd;
+}
+#menuCard,#menuItem {
+  background: rgba(0,0,0,0.4);
+  font-family: 'Sarabun', sans-serif;
+}
+#dropdownMenuButton {
+  font-family: 'Sarabun', sans-serif;
+  float: left;
+  margin: 1%;
+  border-radius: 0px;
+}
+#dropdownmenuitem {
+  color: #cdcdcd;
+}
+#dropdownmenuitem:hover {
+  color: #000;
+}
+#numberInput {
+  width: 70px;
+  float: left;
+
+}
+#size-selector {
+  width: 120px;
+  float: right;
+}
+#crust-selector {
+  border-radius: 0px;
+  margin: 2%;
+}
+#topping-selector {
+  border-radius: 0px;
+  margin: 2%;
+}
+.dropdown-menu a {
+  font-family: 'Sarabun', sans-serif;
+}
+#orderDetails {
+  border-radius: 0px;
+  border: solid #cccbc6 1px;
+  background: rgba(0,0,0,0.8);
+  font-family: 'Sarabun', sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  font-size: 14px;
+  height: 300px;
+}
+#checkOut {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #DE3831;
+  background: #cdcdcd;
+  border-radius: 50px;
+  position: relative;
+}
+#checkOut:hover {
+  color: #ffffff;
+  background: rgba(31,181,40,1)
+}
+.aboutUs {
+  padding: 5%;
+  box-shadow: 0px 5px 8px #2E1C13;
+
+}
+.about-us {
+  text-align: center;
+  color: #4a4741;
+  border-radius: 10px;
+  border-top: solid #9f9f9f 2px;
+  border-bottom: solid #9f9f9f 2px;
+  background: #f5faf9;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 2%;
+}
+.about-us h1 {
+  color: #4a4741;
+  font-family: 'Shrikhand', cursive;
+  font-size: 40px;
+}
+#my-image {
+  float: left;
+  padding: 1.5%;
+  border-radius: 25px 50px 25px 50px;
+}
+.founder-section {
+  border-right: solid #9f9f9f 1px;
+}
+.contact-us {
+  width: 70%;
+  text-align: center;
+  padding-bottom: 9%;
+  color: #9f9f9f;
+}
+
+.form-control::placeholder {
+  color: #9f9f9f;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+}
+#userName {
+  border-radius: 0px;
+  color: #000;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+}
+#inputEmail {
+  border-radius: 0px;
+  color: #000;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+}
+#userMessage {
+  border-radius: 0px;
+  color: #000;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+}
+
+#submit {
+  background: #cdcdcd;
+  border: solid #b4b4b4 1px;
+  border-radius: 50px;
+  color: #4a4741;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+#submit:hover {
+  background: #8ebea7;
+  border: solid #4eb583 1px;
+  color: #4a4741;
+}
+.footer {
+  background: url('../images/footerimg1.png');
+}
+.links {
+  padding-top: 3%;
+  text-align: center;
+  word-spacing: 20px;
+}
+.links img {
+  width: 50px;
+  word-spacing: 30px;
+}
+.branches {
+  width: 30%;
+  padding-top: 2%;
+  color: #000;
+  font-size: 9px;
+  text-align: center;
+  font-weight: bolder;
+}
+.branches h5 {
+  font-size: 10px;
+}
+.footer-text {
+  padding: 3%;
+  color: #e6deae;
+}
+.footer-text p {
+  margin:0;
+  padding:0;
+  line-height:15px;
+  text-align: center;
+  font-size: 13px;
+}
